@@ -24,16 +24,16 @@
   }
   
   /* Background Hover on Timer Button*/
-  .header a:hover {
+  /* .header a:hover {
     background-color: #ddd;
     color: black;
-  }
+  } */
   
   /* Style the active/current link*/
-  .header a.active {
+  /* .header a:active {
     background-color: rgb(50, 56, 63);
     color: white;
-  }
+  } */
   
   /* Float the link section to the right */
   .timer-buttons {
