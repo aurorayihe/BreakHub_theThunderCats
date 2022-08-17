@@ -1,28 +1,49 @@
-// Modal Popup Function To Show Chuck Norris Quote At End Of Timer 
-var time_in_sec = 0;
-var start_calling = '';
-function showPopUp(){
- // start time update after popup modal show	
-  start_calling = setInterval(countdownTime,1000); 
- }
+// catKey = 'a747f151-8a97-4d37-8633-646029636f01';
 
-function countdownTime(){
-  time_in_sec++;
-  html_tag.innerHTML = time_in_sec; 
-  if(time_in_sec == 10){
-clearInterval(start_calling) 
-ClosePopUp();;
-  }
+const url = `https://api.thecatapi.com/v1/breeds`;
+const api_key = 'a747f151-8a97-4d37-8633-646029636f01'
+let storedBreeds = []
+
+ fetch(url,{headers: {
+      'x-api-key': api_key
+    }})
+ .then(function(response) {
+   return response.json();
+ })
+.then(function(data) {
+   
+   //filter to only include those with an `image` object
+   data = data.filter(img=> img.image?.url!=null)
+   
+  storedBreeds = data;
+   
+   for (let i = 0; i < storedBreeds.length; i++) {
+    const breed = storedBreeds[i];
+    let option = document.createElement('option');
+     
+     //skip any breeds that don't have an image
+     if(!breed.image)continue
+     
+    //use the current array index
+    option.value = i;
+    option.innerHTML = `${breed.name}`;
+document.getElementById('breed_selector').appendChild(option);
+    
+    }
+   //show the first breed by default
+   showBreedImage(0)
+})
+.catch(function(error) {
+   console.log(error);
+});
+
+function showBreedImage(index)
+{ 
+  document.getElementById("breed_image").src= storedBreeds[index].image.url;
+  
+  document.getElementById("breed_json").textContent= storedBreeds[index].temperament
+  
+  
+  document.getElementById("wiki_link").href= storedBreeds[index].wikipedia_url
+  document.getElementById("wiki_link").innerHTML= storedBreeds[index].wikipedia_url
 }
-
-function ClosePopUp(){
-}
-
-// Generate Random Chuck Norris Quote
-const generateQuote = function() {
-  let url;
-  if(category !== "all") {
-    url ="https://api.chucknorris.io/jokes/random" 
-  }
-}
-
