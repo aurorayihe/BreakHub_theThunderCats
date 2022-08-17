@@ -85,22 +85,6 @@ body {
   }
 }
 
-/* CSS for Popup Chuck Norris Modal */
-#my-popup{
-	Width: 600px;
-	Height: 400px;
-	Background: gray;
-	Box-sizing: border-box; /* for inside padding */
-	Padding: 10px;
 
-	/* Centers Modal */
-	Position:absolute;
-	top:50%;
-	left:50%;
-	Transform: translate(-50%,-50%);
-
-	/* Hides Modal At Launch */
-	display:none;
-}
 
   
