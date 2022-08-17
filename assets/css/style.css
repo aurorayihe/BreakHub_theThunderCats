@@ -101,9 +101,11 @@ body {
   width: 0;
 }
 
+
 .timer-timeLeft div{
   display: inline-block;
   position: relative;
+  background-color: #e8ae93;
 }
 
 /* Set Timer */
@@ -206,3 +208,4 @@ background-color:#e8ae93 ;
 .timer-show {
   visibility: visible;
 }
+

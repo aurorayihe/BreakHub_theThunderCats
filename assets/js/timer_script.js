@@ -7,37 +7,37 @@ var fill = document.querySelector(".fill");
 var hourEl = document.querySelector("#timer-setHour");
 var minuteEl = document.querySelector("#timer-setMinute");
 var secondEl = document.querySelector("#timer-setSecond");
-var hourLeftEl = document.querySelector("#hour");
-var minuteLeftEl = document.querySelector("#munite");
-var secondLeftEl = document.querySelector("#second");
+var countDownDisplayEl = document.querySelector("#timer-timeLeft");
 var width;
 
-function goProgressBar(hour,minute,second) {
+function goProgressBar(timeLeft) {
     width = 0;
-    let timeLeft = hour * 3600 + minute * 60 + second;
-    var interval = 10/timeLeft;
+    var interval = 100/(timeLeft+1);
     var timer = setInterval(function(){
         width = width + interval;
         fill.setAttribute("style", "width:" + width + "%" );
-        if (width >= 100) {
+        if (width > 100) {
             clearInterval(timer);
-            width = 0;
-            location.assign("./endPage.html");
+            width = 0;          
         }
-    }, 100)
+    }, 1000)
 }
 
-function goCountDown(hour, minute, second){
-    var countDown = setInterval(function(){
-        if (second == 0) {
-            if (minute == 0) {
-                
-            }
-        } else {
-            secondLeftEl.innerText = second;
-            second--;
-        }
+function goCountDown(timeLeft){
 
+    goProgressBar(timeLeft);
+    var countDown = setInterval(function(){
+        if (timeLeft >= 0) {
+            var hour = Math.floor(timeLeft/3600);
+            var minute = Math.floor((timeLeft % 3600) / 60);
+            var second = Math.floor((timeLeft % 3600) % 60);
+            countDownDisplayEl.innerHTML = hour + "h " + minute + "m " + second + "s";
+            timeLeft--;
+        } else {
+            clearInterval(countDown);
+            countDownDisplayEl.setAttribute("class", "timer-hidden");
+            location.assign("./endPage.html");
+        }
     }, 1000)
 }
 
@@ -51,11 +51,10 @@ modalCancelBtn.addEventListener("click", function(){
 })
 
 modalSetBtn.addEventListener("click", function(){
-    let hour = hourEl.value;
-    let minute = minuteEl.value;
-    let second = secondEl.value;
-    goCountDown(hour, minute, second);
+    let hour = Number(hourEl.value * 3600);
+    let minute = Number(minuteEl.value * 60);
+    let second = Number(secondEl.value);
+    let timeLeft = Number(hour + minute + second - 1);
+    goCountDown(timeLeft);
     modalEl.setAttribute("class", "timer-hidden");
-    goProgressBar(hour, minute,second);
-
 })
