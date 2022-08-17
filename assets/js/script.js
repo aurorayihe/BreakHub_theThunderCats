@@ -2,12 +2,30 @@ var setTimeBtnEl = document.querySelector("#timer-set-time");
 var modalEl = document.querySelector("#timer-modalContainer");
 var modalCancelBtn = document.querySelector("#timer-cancel");
 var modalSetBtn = document.querySelector("#timer-set");
-var totalTime;
 var progress = document.querySelector(".progress-bar");
-var fill = document.querySelector(".fill span");
+var fill = document.querySelector(".fill");
 
-var tracker;
+var time = 10;
+var width;
+var interval = 10/time;
 
+function getTimeLeft() {
+    
+}
+
+function goProgressBar() {
+    width = 0;
+    var timer = setInterval(function(){
+        width = width + interval;
+        fill.setAttribute("style", "width:" + width + "%" );
+        
+        fill.innerHTML = width + "%";
+        if (width >= 100) {
+            clearInterval(timer);
+            width = 0;
+        }
+    }, 100)
+}
 /*
 function goProgressBar(){
     var length = 0;
@@ -19,17 +37,6 @@ function goProgressBar(){
     }
 }
 
-/*
-modalSetBtn.addEventListener("click", function(){
-    getTime();
-    setTimer();
-});
-
-function getTime(){
-    var hourEl = document
-}
-
-function setTimer() {
 
 }*/
 
@@ -44,5 +51,6 @@ modalCancelBtn.addEventListener("click", function(){
 
 modalSetBtn.addEventListener("click", function(){
     modalEl.setAttribute("class", "timer-hidden");
+    getTimeLeft();
     goProgressBar();
 })
