@@ -7,10 +7,10 @@ let storedBreeds = []
  fetch(url,{headers: {
       'x-api-key': api_key
     }})
- .then((response) => {
+ .then(function(response) {
    return response.json();
  })
-.then((data) => {
+.then(function(data) {
    
    //filter to only include those with an `image` object
    data = data.filter(img=> img.image?.url!=null)
