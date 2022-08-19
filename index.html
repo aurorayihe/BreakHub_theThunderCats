@@ -75,3 +75,144 @@
  <script src="./assets/js/timer_script.js"></script>   
 </body>
 </html>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Meta Tag for Bulma CSS Framework -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets\css\style.css">
+  <!-- Bulma CSS Framework Stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+
+  <title>BreakHub</title>
+</head>
+
+<body class="has-background-grey-lighter">
+  <!-- Header -->
+  <header class="header p-4">
+    <div class="container level">
+      <div class="level-left has-text-centered">
+        <a href="#default" class="logo has-text-grey-darker is-size-1">BreakHub</a>
+      </div>
+      <div class="timer-buttons level-right has-text-centered">
+        <a href="#home">
+          <button class="button is-light">Set Timer</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <section class="container px-4 pt-5">
+
+    <!-- First Row of Cards -->
+    <div class="columns">
+
+      <!-- Random Cat Card (Nathan) -->
+      <div class="column">
+        <div class="card has-background-grey-light">
+
+          <!-- Card Title Goes Here -->
+
+          <div id="random-cat">
+
+            <p id = "select-cat">Learn About Cats!</p>
+
+            <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector">
+            </select>
+
+            <div>
+              <a id="wiki_link" target="_blank"></a>
+              <div id="breed_json"></div>
+            </div>
+
+            <div>
+              <img id="breed_image"></img>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GIPHY Cat Card (Ayesha) -->
+      <div class="column">
+        <div class="card has-background-grey-light">
+
+            <!-- Card Content -->
+            <div class="gif-container"> 
+            
+              <div>
+                <button type="submit" id="gif-btn" class="button is-light is-medium mt-5 mb-5 is-rounded">Cat GIF Generator</button>
+                <div id="gif-out">
+                  <!-- gif image goes here -->
+                </div>
+              </div>
+            
+              <!-- Card Footer -->
+              <div class="card-footer mt-5">
+                <p class="card-footer-item is-centered has-text-weight-bold has-text-black">Powered by GIPHY</p>
+              </div>
+
+            </div>
+        
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Second Row Full Width -->
+    <div class="columns is-mobile has">
+      <div class="column">
+        <!-- Timer Card (Jenny) -->
+        <div class="card has-background-grey-lighter has-text-black title is-1">TIMER GOES HERE
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Third Row of Cards - Embedded Music Players -->
+    <div class="columns">
+      
+      <div class="column">
+
+        <!-- Nicole's Card - Thundercat Video Embed Mock Youtube API  -->
+        <div class="card has-background-grey-light">
+          <div class="iframe-container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/HcGNqrAtsgg" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column">
+
+        <!-- Second Card - Spotify Playlist Embed Mock Spotify API -->
+        <div class="card has-background-grey-light">
+          <div class="iframe-container">
+            <iframe class="responsive-iframe" 
+            src="https://open.spotify.com/embed/album/7dIID5jd8V3fR2NXkonyD3?utm_source=generator" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
