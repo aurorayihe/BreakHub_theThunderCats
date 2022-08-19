@@ -116,7 +116,7 @@ img {
 .fill{
   height: 20px;
   background-color: #e98e63;
-  background:url(../image/pp3.jpg);
+  background:url(assets/image/pp3.jpg);
   border-radius: 5px;
   width: 0;
 }
