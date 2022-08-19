@@ -79,4 +79,9 @@ body {
     -ms-border-radius:12px;
     -o-border-radius:12px;
 }
+
+img {
+  max-width: 40%;
+  height: auto;      
+}
  
