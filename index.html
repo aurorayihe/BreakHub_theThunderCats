@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 
   <head>
@@ -27,9 +27,16 @@
         <div class="level-left has-text-centered">
           <a href="#default" class="logo has-text-grey-darker is-size-1">BreakHub</a>
         </div>
+        <div class="colume progress-bar timer-hidden">
+          <div id="progress-bar" class="fill">
+          </div>
+        </div>
+        <div class="timer-timeLeft timer-hidden">
+          <span id="timer-timeLeft"></span>
+        </div>
         <div class="timer-buttons level-right has-text-centered">
           <a href="#home">
-            <button class="button is-light">Set Timer</button>
+            <button class="button is-light" id="timer-set-time">Set Timer</button>
           </a>
         </div>
       </div>
@@ -48,10 +55,9 @@
             <!-- Card Title Goes Here -->
 
             <div id="random-cat">
-              <!-- Card Header -->
-              <div class="level">
-                <p id="select-cat" class="card-header-box level-item">Learn About Cats!</p>
-              </div>
+
+              <p id = "select-cat">Learn About Cats!</p>
+
               <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector">
               </select>
 
@@ -75,47 +81,33 @@
 
               <!-- Card Content -->
               <div class="gif-container"> 
-
+              
                 <div>
                   <button type="submit" id="gif-btn" class="button is-light is-medium mt-5 mb-5 is-rounded">Cat GIF Generator</button>
                   <div id="gif-out">
                     <!-- gif image goes here -->
                   </div>
                 </div>
-
+              
                 <!-- Card Footer -->
                 <div class="card-footer mt-5">
                   <p class="card-footer-item is-centered has-text-weight-bold has-text-black">Powered by GIPHY</p>
                 </div>
 
               </div>
-
+          
           </div>
         </div>
 
-      </div>
-
-      <!-- Second Row Full Width -->
-      <div class="columns is-mobile">
-        <div class="column">
-          <!-- Timer Card (Jenny) -->
-          <div class="card has-background-grey-lighter has-text-black title is-1">TIMER GOES HERE
-          </div>
-
-        </div>
       </div>
 
       <!-- Third Row of Cards - Embedded Music Players -->
       <div class="columns">
-
+        
         <div class="column">
 
           <!-- Nicole's Card - Thundercat Video Embed Mock Youtube API  -->
           <div class="card has-background-grey-light">
-            <!-- Card Header -->
-            <div class="level">
-              <p class="level-item card-header-box">Watch Video Clips</p>
-            </div>
             <div class="iframe-container">
               <iframe class="responsive-iframe" src="https://www.youtube.com/embed/HcGNqrAtsgg" title="YouTube video player"
               frameborder="0"
@@ -130,10 +122,6 @@
 
           <!-- Second Card - Spotify Playlist Embed Mock Spotify API -->
           <div class="card has-background-grey-light">
-            <!-- Card Header -->
-            <div class="level">
-              <p class="level-item card-header-box">Listen to Music</p>
-            </div>
             <div class="iframe-container">
               <iframe class="responsive-iframe" 
               src="https://open.spotify.com/embed/album/7dIID5jd8V3fR2NXkonyD3?utm_source=generator" frameBorder="0" allowfullscreen=""
@@ -145,9 +133,25 @@
 
       </div>
 
+      <div id="timer-modalContainer" class="timer-hidden">
+        <div class="timer-modal">
+            <div id="timer-modalHeader">
+                <div>Set Your Break Time!</div>
+            </div>
+            <div id="timer-modalContent">
+                <input id="timer-setHour" class="timer-modalInput"> h <input id="timer-setMinute" class="timer-modalInput"> m <input id="timer-setSecond" class="timer-modalInput"> s
+            </div>
+            <div id="timer-modalFooter">
+                <button id="timer-set" class="modal-btn">Break Start</button>
+                <button id="timer-cancel" class="modal-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
     </section>
 
-
+    <script src="./assets/js/timer_script.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/endPageScript.js"></script>
+    
   </body>
 </html>

@@ -105,3 +105,126 @@ img {
   height: auto;      
 }
  
+/* Set Progress Bar*/
+.progress-bar {
+  width: 50%;
+  height: 20px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+}
+
+.fill{
+  height: 20px;
+  background-color: #e98e63;
+  background:url(../image/pp3.jpg);
+  border-radius: 5px;
+  width: 0;
+}
+
+
+.timer-timeLeft div{
+  display: inline-block;
+  position: relative;
+  background-color: #e8ae93;
+}
+
+/* Set Timer */
+#timer-modalContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(90, 86, 86, 0.8);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.timer-modal {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+#timer-modalHeader {
+  background-color: #e98e63;
+  color:white;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 5px;
+}
+
+#timer-modalHeader div {
+  margin-left: 15px;
+}
+
+#timer-modalContent {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  outline-style: none;
+  border-radius: 3px;
+  width: 50px;
+}
+
+input:hover {
+  border-color: #e98e63;
+  box-shadow: inset 0 0px 3px  #e98e63;
+  transition: all 0s ease-out 0s;
+}
+
+input:focus {
+  box-shadow: inset 0 3px 3px  #e98e63;
+  border-color: #e98e63;
+}
+
+#timer-modalFooter {
+  position:absolute ;
+  right: 0;
+  padding: 5px;
+  bottom: 0;
+}
+
+.modal-btn {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#timer-set {
+  background-color: #e98e63;
+}
+
+#timer-set:hover {
+  background-color: #ec8352;
+}
+
+#timer-cancel {
+background-color:#e8ae93 ;
+}
+
+#timer-cancel:hover {
+  background-color:#e38e66 ;
+  }
+
+.timer-hidden {
+  visibility: hidden;
+}
+
+.timer-show {
+  visibility: visible;
+}
