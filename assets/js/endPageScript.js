@@ -1,6 +1,8 @@
 var key = "RQ0TBDIohRuCjsqhORoyNDs2m6PxD9OS";
 var url = "https://api.giphy.com/v1/gifs/search?q=back+to+work&api_key=" + key;
 var setTimer = document.querySelector("#relax");
+var workEl = document.querySelector("#work");
+var titleEl = document.querySelector("h1");
 
 function getGif() {
     fetch(url)
@@ -43,4 +45,9 @@ checkContent();
 
 setTimer.addEventListener("click", function(){
     location.assign("./index.html");
+})
+
+
+workEl.addEventListener("click", function(){
+    titleEl.innerHTML = "GOOOOOOOOD";
 })

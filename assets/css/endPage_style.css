@@ -17,8 +17,10 @@ h1 {
     margin-left: 100px;
 }
 
+.endPage-btn:hover{
+    background-color: dimgrey;
+}
 #gif-image {
-    background-color: antiquewhite;
     margin-top: 400px;
 }
 
