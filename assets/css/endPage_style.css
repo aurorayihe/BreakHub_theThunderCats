@@ -1,0 +1,29 @@
+/* set up end page style*/
+* {
+    background-color: rgb(0, 0, 0);
+}
+
+h1 {
+    margin-left: 50px;
+    font-size: 100px;
+    font-weight: bolder;
+    color:white;
+}
+
+.endPage-btn {
+    padding: 10px;
+    background-color: darkgray;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.endPage-btn:hover{
+    background-color: dimgrey;
+}
+#gif-image {
+    margin-top: 400px;
+}
+
+.blocks {
+    display: block;
+}

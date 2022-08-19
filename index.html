@@ -1,72 +1,165 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="assets\css\style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>BreakHub</title>
-</head>
+    <!DOCTYPE html>
+    <html lang="en-us">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Meta Tag for Bulma CSS Framework -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="assets\css\style.css">
+      <!-- Bulma CSS Framework Stylesheet -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    
+      <title>BreakHub</title>
+    </head>
+    
+    <body class="has-background-grey-lighter">
+      <!-- Header -->
+      <header class="header p-4">
+        <div class="container level">
+          <div class="level-left has-text-centered">
+            <a href="#default" class="logo has-text-grey-darker is-size-1">BreakHub</a>
+          </div> <br><br>
 
-<body>
-
-    <div class="header">
-        <a href="#default" class="logo">BreakHub</a>
-        
-        <div class="timer-buttons">
-            <a href="#home">
-                <button class="button is-light">Set Timer</button>
-            </a>
-        </div>
-        
-    </div>
-
-    <section class="container p-4 pt-5">
-        <div class="columns is-mobile">
-            <div class="column ">
-                <div class="card has-background-grey-light">
-                    <div id="random-cat">
-                        <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector">
-                        </select>
-                        
-                        <div>
-                            <a id="wiki_link" target="_blank"></a>
-                            <div id="breed_json"></div>
-                        </div>
-                        
-                        <div>
-                            <img id="breed_image"></img>
-                        </div>
-                        
+        <!-- Visual Timer Bar (Jenny) -->
+          <div class="columns is-mobile">
+            <div class="column">
+                    <div class="timer-timeLeft">
+                        <span id="timer-timeLeft"></span>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="card has-background-grey-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-            </div>
-        </div>
 
-        <div class="columns is-mobile">
-            <div class="column">
-                <div class="card has-background-grey-lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-            </div>
+        <!-- Timer Button (Jenny) -->
+          <div class="timer-buttons level-right has-text-centered">
+            <a href="#home">
+              <button class="button is-light">Set Timer</button>
+            </a>
+          </div>
         </div>
-
-        <div class="columns is-mobile">
-            <div class="column">
-                <!-- Nicole's Card - Thundercat Video Embed Mock Youtube API  -->
-                <div class="card has-background-grey-light">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HcGNqrAtsgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <!-- Second Card - Spotify Playlist Embed Mock Spotify API -->
-            <div class="column">
-                <div class="card has-background-grey-light">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7dIID5jd8V3fR2NXkonyD3?utm_source=generator" width="100%" height="315" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
-            </div>
-        </div>
-    </section>
+      </header>
     
+      <!-- Main -->
+      <section class="container px-4 pt-5">
+    
+        <!-- First Row of Cards -->
+        <div class="columns">
+    
+          <!-- Random Cat Card (Nathan) -->
+          <div class="column">
+            <div class="card has-background-grey-light">
+    
+              <!-- Card Title Goes Here -->
+    
+              <div id="random-cat">
+    
+                <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector">
+                </select>
+    
+                <div>
+                  <a id="wiki_link" target="_blank"></a>
+                  <div id="breed_json"></div>
+                </div>
+    
+                <div>
+                  <img id="breed_image"></img>
+                </div>
+    
+              </div>
+    
+            </div>
+          </div>
+    
+          <!-- GIPHY Cat Card (Ayesha) -->
+          <div class="column">
+            <div class="card has-background-grey-light">
+    
+                <!-- Card Content -->
+                <div class="gif-container"> 
+                
+                  <div>
+                    <button type="submit" id="gif-btn" class="button is-light is-medium mt-5 mb-5 is-rounded">Cat GIF Generator</button>
+                    <div id="gif-out">
+                      <!-- gif image goes here -->
+                    </div>
+                  </div>
+                
+                  <!-- Card Footer -->
+                  <div class="card-footer mt-5">
+                    <p class="card-footer-item is-centered has-text-weight-bold has-text-black">Powered by GIPHY</p>
+                  </div>
+    
+                </div>
+            
+            </div>
+          </div>
+    
+        </div>
+    
+        <!-- Second Row of Cards - Embedded Music Players -->
+        <div class="columns">
+          
+          <div class="column">
+    
+            <!-- Nicole's Card - Thundercat Video Embed Mock Youtube API  -->
+            <div class="card has-background-grey-light">
+              <div class="iframe-container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/HcGNqrAtsgg" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              </div>
+            </div>
+    
+          </div>
+    
+          <div class="column">
+    
+            <!-- Second Card - Spotify Playlist Embed Mock Spotify API -->
+            <div class="card has-background-grey-light">
+              <div class="iframe-container">
+                <iframe class="responsive-iframe" 
+                src="https://open.spotify.com/embed/album/7dIID5jd8V3fR2NXkonyD3?utm_source=generator" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </div>
+            </div>
+    
+          </div>
+        
+    <!-- Set Your Break Time Modal (Jenny) -->
+      <div id="timer-modalContainer" class="timer-hidden">
+        <div class="timer-modal">
+            <div id="timer-modalHeader">
+                <div>Set Your Break Time!</div>
+            </div>
+            <div id="timer-modalContent">
+                <input id="timer-setHour" class="timer-modalInput"> h <input id="timer-setMinute" class="timer-modalInput"> m <input id="timer-setSecond" class="timer-modalInput"> s
+            </div>
+            <div id="timer-modalFooter">
+                <button id="timer-set" class="modal-btn">Break Start</button>
+                <button id="timer-cancel" class="modal-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
 
-    <script src="./assets/js/script.js"></script>
-</body>
-</html>
+    
+        </div>
+    
+      </section>
+    
+    
+      <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/timer_script.js"></script>  
+    
+    </body>
+    </html>
