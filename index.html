@@ -44,9 +44,10 @@
           <!-- Card Title Goes Here -->
 
           <div id="random-cat">
-
-            <p id = "select-cat">Learn About Cats!</p>
-
+            <!-- Card Header -->
+            <div class="level">
+              <p id="select-cat" class="card-header-box level-item">Learn About Cats!</p>
+            </div>
             <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector">
             </select>
 
@@ -91,7 +92,7 @@
     </div>
 
     <!-- Second Row Full Width -->
-    <div class="columns is-mobile has">
+    <div class="columns is-mobile">
       <div class="column">
         <!-- Timer Card (Jenny) -->
         <div class="card has-background-grey-lighter has-text-black title is-1">TIMER GOES HERE
@@ -107,6 +108,10 @@
 
         <!-- Nicole's Card - Thundercat Video Embed Mock Youtube API  -->
         <div class="card has-background-grey-light">
+          <!-- Card Header -->
+          <div class="level">
+            <p class="level-item card-header-box">Watch Video Clips</p>
+          </div>
           <div class="iframe-container">
             <iframe class="responsive-iframe" src="https://www.youtube.com/embed/HcGNqrAtsgg" title="YouTube video player"
             frameborder="0"
@@ -121,6 +126,10 @@
 
         <!-- Second Card - Spotify Playlist Embed Mock Spotify API -->
         <div class="card has-background-grey-light">
+          <!-- Card Header -->
+          <div class="level">
+            <p class="level-item card-header-box">Listen to Music</p>
+          </div>
           <div class="iframe-container">
             <iframe class="responsive-iframe" 
             src="https://open.spotify.com/embed/album/7dIID5jd8V3fR2NXkonyD3?utm_source=generator" frameBorder="0" allowfullscreen=""
