@@ -57,13 +57,9 @@ body {
     font-weight: bold;
   }
 
-  #random-cat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  #select-cat {
+  /* Card Header Styles */
+  .card-header-box {
     background-color: #e98e63;
     border: 1px solid #afa9a9;
     font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -71,11 +67,15 @@ body {
     font-size: 25px;
     font-weight: bold;
     margin: 22px;
-    border-radius: 10%;
+    border-radius: 50px;
     width: 70%;
-    text-align: center;;
+    text-align: center;
     padding: 13px;
-  }
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
 
 /* Making iFrames Responsive */
 .iframe-container {
