@@ -1,47 +1,82 @@
 * {
-  box-sizing: border-box;
-}
-
+    box-sizing: border-box;
+    /* flex-wrap: wrap; */
+  }
+  
 body {
-  font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
+  }
+
+/* Header */
+.header {
+    background-color: #e98e63;
+  }
+
+  /*Header Links*/
+  .header a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
 }
+  
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  background-color: orange;
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+     letter-spacing: 9px;
+    /* Ayesha Changed Font Family for logo */
+    font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  }
+  
+
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #afa9a9;
+  }
+
+  .card-header-title {
+   font-size: 18px;
+  }
+
+  .card-footer { 
+    font-size: 12px;
+  }
+
+  #gif-btn {
+    background-color: #e98e63;
+    border: 1px solid #afa9a9;
+    font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+/* Making iFrames Responsive */
+.iframe-container {
+  position: relative; 
+  overflow: hidden;
+  width: 100%;
+  /* 4:3 aspect ratio */
+  padding-top: 75%;
 }
-
-.logo {
-  border: 1px solid blue;
- 
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:12px  ;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -ms-border-radius:12px;
+    -o-border-radius:12px;
 }
-
-.timer { 
-  border: 1px solid green;
-
-}
-
-.timer-btn {
-  border: 1px solid red;
-}
-
-.flex-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-
-}
-
-.timer-feature {
-  min-width: 100%;
-}
-
-.feature {
-  min-width: 50%;
-  border: 1px solid white;
-  background-color: #c3c3c3 ;
-}
+  
