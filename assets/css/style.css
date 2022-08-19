@@ -22,15 +22,20 @@ body {
   
 
   .header a.logo {
-    font-size: 25px;
+    font-size: 50px;
     font-weight: bold;
-     letter-spacing: 9px;
-    /* Ayesha Changed Font Family for logo */
+     letter-spacing: 5px;
     font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    color: #333333;
+   
   }
+ 
   
-
+  .header-btn:hover {
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(104, 69, 69, 0.2);
+  }
   
   /* Style the counter cards */
   .card {
@@ -63,6 +68,7 @@ body {
   }
   /* Card Header Styles */
   .card-header-box {
+   
     background-color: #e98e63;
     border: 1px solid #afa9a9;
     font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

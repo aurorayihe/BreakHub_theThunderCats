@@ -24,21 +24,52 @@
     <!-- Header -->
     <header class="header p-4">
       <div class="container level">
+
+        <!-- BreakHub Logo -->
         <div class="level-left has-text-centered">
-          <a href="#default" class="logo has-text-grey-darker is-size-1">BreakHub</a>
+          <a href="#default" class="logo is-size-1">BreakHub</a>
         </div>
-        <div class="colume progress-bar timer-hidden">
+
+        <!-- Timer Progress Bar -->
+        <div class="column progress-bar timer-hidden">
           <div id="progress-bar" class="fill">
           </div>
         </div>
         <div class="timer-timeLeft timer-hidden">
-          <span id="timer-timeLeft"></span>
+            <span id="timer-timeLeft"></span>
         </div>
-        <div class="timer-buttons level-right has-text-centered">
-          <a href="#home">
-            <button class="button is-light" id="timer-set-time">Set Timer</button>
-          </a>
-        </div>
+
+        <!-- Buttons -->
+        <div class="level-right">
+
+          <!-- Set Timer Button -->
+          <div class="has-text-centered mt-2">
+            <a href="#home">
+              <button class="button has-background-grey-light has-text-black header-btn" id="timer-set-time">Set Timer</button>
+            </a>
+          </div>
+
+          <!-- Theme Customization Dummy Dropdown Menu -->
+          <div class="dropdown is-hoverable is-right level-item mx-3 mt-2">
+            <div class="dropdown-trigger">
+              <button class="button  has-background-grey-light header-btn">
+                <span>Customize</span>
+              </button>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <a href="#" class="dropdown-item">Theme 1</a>
+                <a class="dropdown-item">Theme 2</a>
+                <a href="#" class="dropdown-item">Theme 3</a>
+                <hr class="dropdown-divider">
+                <a href="#" class="dropdown-item has-text-centered">Edit Current Theme</a>
+                <hr class="dropdown-divider">
+                <a href="#" class="dropdown-item">Add New Theme</a>
+              </div>
+            </div>
+          </div>
+
+        </div> 
       </div>
     </header>
 
@@ -50,13 +81,11 @@
 
         <!-- Random Cat Card (Nathan) -->
         <div class="column">
-          <div class="card has-background-grey-light">
-
-            <!-- Card Title Goes Here -->
+          <div class="card has-background-grey-light pb-5">
 
             <div id="random-cat">
               <!-- Card Header -->
-              <div class="level">
+              <div class="level is-flex is-justify-content-center">
                 <p id = "select-cat" class="card-header-box level-item">Learn About Cats!</p>
               </div>
 
@@ -79,7 +108,7 @@
 
         <!-- GIPHY Cat Card (Ayesha) -->
         <div class="column">
-          <div class="card has-background-grey-light">
+          <div class="card has-background-grey-light pb-5">
 
               <!-- Card Content -->
               <div class="gif-container"> 
@@ -109,10 +138,10 @@
         <div class="column">
 
           <!-- Nicole's Card - Thundercat Video Embed Mock Youtube API  -->
-          <div class="card has-background-grey-light">
+          <div class="card has-background-grey-light pb-5">
           
-            <!-- Card Header -->
-          <div class="level">
+          <!-- Card Header -->
+          <div class="level is-flex is-justify-content-center">
             <p id="select-cat" class="card-header-box level-item">Watch Video Clips</p>
           </div>
 
@@ -129,10 +158,10 @@
         <div class="column">
 
           <!-- Second Card - Spotify Playlist Embed Mock Spotify API -->
-          <div class="card has-background-grey-light">
+          <div class="card has-background-grey-light pb-5">
 
           <!-- Card Header -->
-          <div class="level">
+          <div class="level is-flex is-justify-content-center">
             <p id="select-cat" class="card-header-box level-item">Listen to Music</p>
           </div>
             
