@@ -57,4 +57,8 @@ modalSetBtn.addEventListener("click", function(){
     let timeLeft = Number(hour + minute + second - 1);
     goCountDown(timeLeft);
     modalEl.setAttribute("class", "timer-hidden");
+    progress.setAttribute("class", "timer-show");
+    progress.classList.add("colume","progress-bar");
+    countDownDisplayEl.setAttribute("class", "timer-show");
+    progress.classList.add("timer-timeLeft");
 })
