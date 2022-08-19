@@ -57,7 +57,10 @@ body {
     font-weight: bold;
   }
 
-
+  #gif-btn:hover {
+    background-color: #c6c6c6 ;
+    border: 3px solid #e98e63;
+  }
   /* Card Header Styles */
   .card-header-box {
     background-color: #e98e63;
@@ -66,7 +69,7 @@ body {
     color: black;
     font-size: 25px;
     font-weight: bold;
-    margin: 22px;
+    margin: 22px 0 10px 0px;
     border-radius: 50px;
     width: 70%;
     text-align: center;
