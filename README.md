@@ -19,7 +19,9 @@ CSS Frameworks Used:
 Link to Deployed Application:
 https://aurorayihe.github.io/ProjectOne_BreakHub_theThunderCats/
 
-Screenshots of Functioning Applicaiton:
+Screenshots of Functioning Application:
+<p></p>
+
 <img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo1.JPG" alt="break-hub-1">
 
 <img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo2.JPG" alt="break-hub-2">
