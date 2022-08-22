@@ -2,26 +2,53 @@
 * {
     background-color: rgb(0, 0, 0);
 }
-
-h1 {
-    margin-left: 50px;
-    font-size: 100px;
-    font-weight: bolder;
-    color:white;
+body {
+    display: flex;
+    justify-content: center;
 }
 
+h1 {
+    font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    border-bottom: 5px solid #e98e63;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bolder;
+    color: #f5f5f5;
+}
+
+/* flex buttons */
+.btns-flex {
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 100px;
+}
+
+/* style the buttons */
 .endPage-btn {
-    padding: 10px;
+    font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    padding: 20px 15px 15px 15px;
+    font-size: 25px;
+    border: 4px solid #e98e63;
+   
     background-color: darkgray;
-    border-radius: 10px;
-    margin-left: 100px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
 }
 
 .endPage-btn:hover{
     background-color: dimgrey;
+    color: white;
+    border: 4px solid white;
 }
-#gif-image {
-    margin-top: 400px;
+
+/* center the gif image */
+.gif-flex {
+    display: flex; 
+    justify-content: center;
+    
 }
 
 .blocks {
