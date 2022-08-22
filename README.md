@@ -19,8 +19,14 @@ CSS Frameworks Used:
 Link to Deployed Application:
 https://aurorayihe.github.io/ProjectOne_BreakHub_theThunderCats/
 
-Screenshot of Functioning Applicaiton:
-<!--Screenshot URL goes here! -->
+Screenshots of Functioning Application:
+<p></p>
+
+<img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo1.JPG" alt="break-hub-1">
+
+<img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo2.JPG" alt="break-hub-2">
+
+<img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo3.JPG" alt="break-hub-3">
 
 Future Application Feature Goals:
 - Themes and user customization
