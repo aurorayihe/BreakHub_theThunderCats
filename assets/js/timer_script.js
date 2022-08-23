@@ -9,6 +9,7 @@ var minuteEl = document.querySelector("#timer-setMinute");
 var secondEl = document.querySelector("#timer-setSecond");
 var countDownDisplayEl = document.querySelector("#timer-timeLeft");
 var width;
+var earlierTime = JSON.parse(localStorage.getItem("earlierTime"));
 
 function goProgressBar(timeLeft) {
     width = 0;
@@ -55,6 +56,7 @@ modalSetBtn.addEventListener("click", function(){
     let minute = Number(minuteEl.value * 60);
     let second = Number(secondEl.value);
     let timeLeft = Number(hour + minute + second - 1);
+    storeTime(timeLeft);
     goCountDown(timeLeft);
     modalEl.setAttribute("class", "timer-hidden");
     progress.setAttribute("class", "timer-show");
@@ -62,3 +64,30 @@ modalSetBtn.addEventListener("click", function(){
     countDownDisplayEl.setAttribute("class", "timer-show");
     progress.classList.add("timer-timeLeft");
 })
+
+function storeTime(timeLeft) {
+    console.log(earlierTime);
+    if (earlierTime !== null) {
+        console.log("stored!");
+        var hour = Math.floor(earlierTime/3600);
+        var minute = Math.floor((earlierTime % 3600) / 60);
+        var second = Math.floor((earlierTime % 3600) % 60); 
+        hourEl.value = hour;
+        minuteEl.value = minute;
+        secondEl.value = second;
+        localStorage.setItem("earlierTime", JSON.stringify(timeStore));
+    } else {
+        var hour = Math.floor(earlierTime/3600);
+        var minute = Math.floor((earlierTime % 3600) / 60);
+        var second = Math.floor((earlierTime % 3600) % 60); 
+        hourEl.value = hour;
+        minuteEl.value = minute;
+        secondEl.value = second;
+    }
+    var timeStore = timeLeft + 1 ;
+    localStorage.setItem("earlierTime", JSON.stringify(timeStore));
+    console.log(earlierTime);
+    console.log("sooo");
+}
+
+storeTime();
