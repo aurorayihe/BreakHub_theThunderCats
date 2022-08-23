@@ -1,8 +1,8 @@
-# Project 1 BreakHub The Thundercats
+# Project 1 BreakHub 
 
-UCI Project 1 - BreakHub
+Team 2 The Thundercats
 ---------------------
-Group: Thundercats, Members:
+Members:
 - Ayesha Bajwa
 - Nicole Borja
 - Nathan Underwood
