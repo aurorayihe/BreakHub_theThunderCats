@@ -45,9 +45,6 @@ body {
     background-color: #afa9a9;
   }
 
-  .card-header-title {
-   font-size: 18px;
-  }
 
   .card-footer { 
     font-size: 12px;
@@ -55,11 +52,11 @@ body {
 
   #gif-btn, #select-cat {
     background-color: #e98e63;
-    border: 1px solid #afa9a9;
+    border: 3px solid #c6c6c6;
     font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    font-size: 25px;
     font-weight: bold;
+    
   }
 
   #gif-btn:hover {
@@ -68,14 +65,13 @@ body {
   }
   /* Card Header Styles */
   .card-header-box {
-   
     background-color: #e98e63;
     border: 1px solid #afa9a9;
     font-family: 'Bungee Inline', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 22px 0 10px 0px;
+    margin: 22px 0 10px 0;
     border-radius: 50px;
     width: 70%;
     text-align: center;
@@ -86,6 +82,9 @@ body {
     -o-border-radius: 50px;
 }
 
+.gif-container button {
+  margin-bottom: 10px;
+}
 /* Making iFrames Responsive */
 .iframe-container {
   position: relative; 
