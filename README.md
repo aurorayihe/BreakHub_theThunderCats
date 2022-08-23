@@ -1,4 +1,4 @@
-# Project1_BreakHub_TheThundercats
+# Project 1 BreakHub The Thundercats
 
 UCI Project 1 - BreakHub
 ---------------------
