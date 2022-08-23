@@ -1,4 +1,4 @@
-# Project 1 BreakHub 
+# Project 1 - BreakHub 
 
 Team 2 The Thundercats
 ---------------------
