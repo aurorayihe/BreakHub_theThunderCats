@@ -36,7 +36,7 @@ Screenshots of Functioning Application:
 
 <img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo2.JPG" alt="break-hub-2">
 
-<img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo3.JPG" alt="break-hub-3">
+<img src= "https://github.com/aurorayihe/ProjectOne_BreakHub_theThunderCats/blob/main/assets/image/demo-3.png" alt="break-hub-3">
 
 Future Application Feature Goals
 ---------------------
